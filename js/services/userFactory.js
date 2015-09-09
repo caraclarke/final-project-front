@@ -4,7 +4,7 @@
     var userFactory = function($http) {
       var userAPI = {};
 
-      userAPI.getPerson = function(userId) {
+      userAPI.getUser = function(userId) {
         return $http.get('http://localhost:3000/users/' + userId);
       };
 

@@ -16,7 +16,7 @@
     } // end init
 
     vm.delete = function() {
-      userFactory.delete(vm.currentPerson)
+      userFactory.delete(vm.currentUser)
         .then(function(result) {
           console.log('destroyed');
         }, function(data, status, headers, config) {
@@ -25,7 +25,7 @@
     }; // end delete
 
     vm.update = function() {
-      userFactory.update(vm.currentPerson)
+      userFactory.update(vm.currentUser)
         .then(function(result) {
           vm.user = result.data;
           vm.users.push(vm.user);
@@ -38,7 +38,8 @@
     init();
   }; // end UserController
 
-  UserController.$inject = ['$routeParams', 'userFactory'];
+	UserController.$inject = ['$routeParams', 'userFactory'];
 
-  angular.module('internetHistoryApp').controller('userController', UserController);
+	angular.module('internetHistoryApp').controller('userController', UserController);
+
 })(); // end page

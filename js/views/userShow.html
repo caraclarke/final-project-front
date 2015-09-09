@@ -1,30 +1,20 @@
-<h3>{{personCtrl.person.name}}'s Address Information</h3>
+<h3>{{userCtrl.user.fName}} {{userCtrl.user.lName}}'s Information</h3>
 
 <table>
   <tr>
-    <th ng-click="personCtrl.doSort('name')">Name</th>
-    <th ng-click="personCtrl.doSort('street')">Street</th>
-    <th ng-click="personCtrl.doSort('city')">City</th>
-    <th ng-click="personCtrl.doSort('state')">State</th>
-    <th ng-click="personCtrl.doSort('zip')">Zip Code</th>
-    <th ng-click="personCtrl.doSort('email-home')">Home Email</th>
-    <th ng-click="personCtrl.doSort('email-work')">Work Email</th>
-    <th ng-click="personCtrl.doSort('phone-home')">Home Phone</th>
-    <th ng-click="personCtrl.doSort('phone-mobile')">Mobile Phone</th>
+    <th>Email</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Admin</th>
     <th>&nbsp;</th>
   </tr>
   <tr>
-    <td>{{ personCtrl.person.name }}</td>
-    <td>{{ personCtrl.person.address.street }}</td>
-    <td>{{ personCtrl.person.address.city }}</td>
-    <td>{{ personCtrl.person.address.state }}</td>
-    <td>{{ personCtrl.person.address.zip }}</td>
-    <td>{{ personCtrl.person.email[0].address }}</td>
-    <td>{{ personCtrl.person.email[1].address }}</td>
-    <td>{{ personCtrl.person.phone[0].number }}</td>
-    <td>{{ personCtrl.person.phone[1].number }}</td>
-    <td><a href="{{person.id}}">Update Person</a></td>
-    <td><a href="{{person.id}}">Delete Person</a></td>
+    <td>{{ userCtrl.user.email }}</td>
+    <td>{{ userCtrl.user.fName }}</td>
+    <td>{{ userCtrl.user.lName }}</td>
+    <td>{{ userCtrl.user.admin }}</td>
+    <td><a href="{{user.id}}">Update Account</a></td>
+    <td><a href="{{user.id}}">Delete Account</a></td>
   </tr>
 </table>
 <br><br>

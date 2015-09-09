@@ -1,14 +1,14 @@
 (function internetHistoryApp() {
-	var app = angular.module('internetHistoryApp', ['ngRoute', 'ngMessages']);
+	var internetHistoryApp = angular.module('internetHistoryApp', ['ngRoute']); // , 'ngMessages'
+	var userController = internetHistoryApp.controller('userController');
 
-	app.config(function($routeProvider){
+	internetHistoryApp.config(function($routeProvider) {
 		$routeProvider
 			.when('/users/userId', {
 				controller: userController,
-				controllerAs: userCtrl,
+				controllerAs: 'userCtrl',
 				templateUrl: 'js/views/userShow.html'
-			}
-		)
-		.otherwise({ redirectTo: '/' });
+			})
+		.otherwise({ redirectTo: '/' },  console.log('redirected'));
 	});
 })();
