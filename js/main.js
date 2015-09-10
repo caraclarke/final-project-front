@@ -25,7 +25,7 @@ $(function() {
 			$('#user-profile').removeClass('hide');
 	  }).fail(function(jqxhr) {
 			console.error(jqxhr);
-	    console.log('Email or Password incorrect, please try again.');
+	    // console.log('Email or Password incorrect, please try again.');
 	  });
 	}); // end login
 
