@@ -3,7 +3,8 @@
 	// var userController = internetHistoryApp.controller('userController');
 	// var timelineController = internetHistoryApp.controller('timelineController');
 
-	internetHistoryApp.config(function($routeProvider) {
+	internetHistoryApp.config(function($routeProvider, $httpProvider) {
+		$httpProvider.defaults.withCredentials = true;
 		$routeProvider
 			.when('/', {
 				controller: 'timelineController',

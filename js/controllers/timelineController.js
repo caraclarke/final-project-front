@@ -9,20 +9,20 @@
 		vm.currentEvent = {};
 		vm.master = {};
 
-			function init() {
-				timelineFactory.getEvents()
-				.then(function(result) {
-					vm.events = result.data;
-				}, function(data, status, headers, config) {
-					console.error(error);
-					console.log('error getting events from db');
-				});
-			} // end init
+		function init() {
+			timelineFactory.getEvents()
+			.then(function(result) {
+				vm.events = result.data.events;
+			}, function(data, status, headers, config) {
+				console.error(error);
+				console.log('error getting events from db');
+			});
+		} // end init
 
-			init();
+		init();
 	}; // end timelineController
 
-		TimelineController.$inject = ['appSettings', 'timelineFactory'];
+		TimelineController.$inject = ['timelineFactory', 'appSettings'];
 
 		angular.module('internetHistoryApp').controller('timelineController', TimelineController);
 	})();

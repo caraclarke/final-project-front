@@ -1,29 +1,29 @@
 (function timelineFactory() {
 
 	var TimelineFactory = function($http) {
-		var event = {};
+		var eventAPI = {};
 
-		event.getEvents = function() {
+		eventAPI.getEvents = function() {
       // allow access to index
-      return $http.get('http://localhost:3000/events');
+      return $http.get('http://localhost:3000/events/');
     };
 
-    event.showEvent = function(eventId) {
+    eventAPI.showEvent = function(eventId) {
       return $http.get('http://localhost:3000/events/' + eventId);
     };
 
-		event.create = function(event) {
+		eventAPI.create = function(event) {
 			return $http.post('http://localhost:3000/events', { event: event });
 		};
 
-		event.update = function(event) {
+		eventAPI.update = function(event) {
 			return $http.patch('http://localhost:3000/events' + eventId, event);
 		};
 
-		event.delete = function(event) {
+		eventAPI.delete = function(event) {
 			return $http.delete('http://localhost:3000/events' + eventId);
 		};
-		return event;
+		return eventAPI;
 	}; // end timelineFactory
 
 	TimelineFactory.$inject = ['$http'];

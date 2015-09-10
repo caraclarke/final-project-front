@@ -3,16 +3,17 @@
 <section id="cd-timeline" class="cd-container">
 
 	<!-- begin event block -->
-	<div class="cd-timeline-block">
+	<div class="cd-timeline-block" ng-repeat="e in tIndexCtrl.events">
+		<!-- <h2>{{e}}</h2> -->
 		<div class="cd-timeline-img cd-picture">
 			<img src="img/internet-icon.png" alt="Icon">
 		</div> <!-- cd-timeline-img -->
 
-		<div class="cd-timeline-content" ng-repeat="event in tIndexCtrl.events | orderBy:tIndexCtrl">
-			<h2>{{event.title}}</h2>
-			<p>{{event.caption}}</p>
+		<div class="cd-timeline-content">
+			<h2>{{e.title}}</h2>
+			<p>{{e.caption}}</p>
 			<!-- <a class="cd-read-more" href="#/events/{{event.id}}">Read more</a> -->
-			<span class="cd-date">{{event.date}}</span>
+			<span class="cd-date">{{e.date}}</span>
 		</div> <!-- cd-timeline-content -->
 	</div> <!-- cd-timeline-block -->
 	<!-- end event block -->
