@@ -1,12 +1,13 @@
 (function internetHistoryApp() {
 	var internetHistoryApp = angular.module('internetHistoryApp', ['ngRoute']); // , 'ngMessages'
 	// var userController = internetHistoryApp.controller('userController');
+	// var timelineController = internetHistoryApp.controller('timelineController');
 
 	internetHistoryApp.config(function($routeProvider) {
 		$routeProvider
 			.when('/', {
 				controller: 'timelineController',
-				controllerAs: 'tCtrl',
+				controllerAs: 'tIndexCtrl',
 				templateUrl: 'js/views/timelineIndex.html'
 			})
 			.when('/users/userId', {

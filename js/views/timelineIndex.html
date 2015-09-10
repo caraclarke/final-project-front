@@ -1,0 +1,21 @@
+<h1>{{appSettings.title}}</h1>
+<!-- title, content, image, date  -->
+<section id="cd-timeline" class="cd-container">
+
+	<!-- begin event block -->
+	<div class="cd-timeline-block">
+		<div class="cd-timeline-img cd-picture">
+			<img src="img/internet-icon.png" alt="Icon">
+		</div> <!-- cd-timeline-img -->
+
+		<div class="cd-timeline-content" ng-repeat="event in tIndexCtrl.events | orderBy:tIndexCtrl">
+			<h2>{{event.title}}</h2>
+			<p>{{event.caption}}</p>
+			<!-- <a class="cd-read-more" href="#/events/{{event.id}}">Read more</a> -->
+			<span class="cd-date">{{event.date}}</span>
+		</div> <!-- cd-timeline-content -->
+	</div> <!-- cd-timeline-block -->
+	<!-- end event block -->
+
+</section> <!-- cd-timeline -->
+<footer>Version: {{ appSettings.version }}</footer>
