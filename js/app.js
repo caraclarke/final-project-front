@@ -16,7 +16,7 @@
 				controllerAs: 'loginCtrl',
 				templateUrl: 'js/views/loginPage.html'
 			})
-			.when('/users/userId', {
+			.when('/userShow/', {
 				controller: 'userController',
 				controllerAs: 'userCtrl',
 				templateUrl: 'js/views/userShow.html'

@@ -5,12 +5,11 @@
       var userAPI = {};
 
 			userAPI.login = function(email, password) {
-				console.log(email, password);
 				return $http.post('http://localhost:3000/login/', { 'credentials': { email: email, password: password }});
 			};
 
 			userAPI.getUser = function(userId) {
-        return $http.get('http://localhost:3000/users/' + userId);
+        return $http.get('http://localhost:3000/users/' + userId, {headers: { Authorization: 'Token token=' + simpleStorage.get('token')}});
       };
 
       userAPI.create = function(user) {
