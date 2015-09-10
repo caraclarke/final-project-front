@@ -26,17 +26,49 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<!-- <li><a href="#contact">Contact</a></li> -->
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-					<li><button type="button" class="btn btn-default">Admin Login</button></li>
-					<!-- TODO: margin to top of button -->
+	        <li><a href="#" class="" id="show-login-modal">Login</a></li>
+	        <li><a href="#" class="" id="show-register-modal">Register</a></li>
+	        <li><a href="#" class="hide" id="logout-button">Logout</a></li>
+	        <li><a href="profile.html" class="hide" id="user-profile">Profile</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<!-- end navbar -->
+
+	<!-- begin login modal -->
+	 <div id="login-modal" class="modal fade" tabindex="-1" role="dialog">
+		 <div class="modal-dialog">
+			 <div class="modal-content">
+				 <div class="modal-header">
+					 <button id="login-modal-x" type="button" class="close x" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span>&#x2716;</button>
+					 <h4 class="modal-title">Sign In</h4>
+				 </div>
+
+				 <div class="modal-body">
+					 <form class="form center-block">
+						 <div class="form-group">
+							 <label for="login-email">Email: </label>
+							 <input type="text" class="form-control input-md" placeholder="Email address" id="login-email">
+						 </div>
+						 <div class="form-group">
+							 <label for="login-password">Password: </label>
+							 <input type="password" class="form-control input-md" placeholder="Password" id="login-password">
+						 </div>
+					 </form>
+				 </div>
+
+				 <div class="modal-footer">
+					 <div class="alert alert-danger hide text-left" role="alert" id="login-alert">
+						 <p>We were unable to locate an account with that email address and password combination. Please try again.</p>
+					 </div>
+					 <button id="login-modal-close" type="button" class="btn btn-default x" data-dismiss="modal" aria-label="Close">Close</button>
+					 <button type="button" class="btn btn-primary" id="login-button">Sign In</button>
+				 </div>
+			 </div>
+		 </div>
+	 </div>
+	 <!-- end login modal -->
 
 	<div ng-view></div>
 
