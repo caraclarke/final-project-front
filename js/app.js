@@ -11,6 +11,11 @@
 				controllerAs: 'tIndexCtrl',
 				templateUrl: 'js/views/timelineIndex.html'
 			})
+			.when('/loginPage', {
+				controller: 'loginController',
+				controllerAs: 'loginCtrl',
+				templateUrl: 'js/views/loginPage.html'
+			})
 			.when('/users/userId', {
 				controller: 'userController',
 				controllerAs: 'userCtrl',

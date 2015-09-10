@@ -1,12 +1,23 @@
 $(function() {
   'use strict';
+	var timelineBlocks = $('.cd-timeline-block'), offset = 0.8;
+	hideBlocks(timelineBlocks, offset); // hide blocks that are not onscreen
 
 	$(window).on('scroll', function() {
-		$timeline_block.each(function() {
-			if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
-				$(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-			}
+		(!window.requestAnimationFrame) ? setTimeout(function() { showBlocks(timelineBlocks, offset); }, 100)
+			: window.requestAnimationFrame(function() { showBlocks(timelineBlocks, offset); });
+	});
+
+	function hideBlocks(blocks, offset) {
+		blocks.each(function() {
+			( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
 		});
-	}); // end on scroll
+	}
+
+	function showBlocks(blocks, offset) {
+		blocks.each(function() {
+			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+		});
+	}
 
 }); // end page
