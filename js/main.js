@@ -21,7 +21,6 @@ $(function() {
 	    simpleStorage.set('userId', data.user_id);
 			$('#login-modal').modal('hide');
 	    $('#show-login-modal').addClass('hide');
-	    $('#show-register-modal').addClass('hide');
 	    $('#logout-button').removeClass('hide');
 			$('#user-profile').removeClass('hide');
 	  }).fail(function(jqxhr) {
