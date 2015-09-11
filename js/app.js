@@ -11,6 +11,11 @@
 				controllerAs: 'tIndexCtrl',
 				templateUrl: 'js/views/timelineIndex.html'
 			})
+			.when('/events/:eventId', {
+				controller: 'timelineShowController',
+				controllerAs: 'tShowCtrl',
+				templateUrl: 'js/views/timelineShow.html'
+			})
 			.when('/loginPage', {
 				controller: 'loginController',
 				controllerAs: 'loginCtrl',

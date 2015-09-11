@@ -4,12 +4,18 @@
 		var vm = this;
 		vm.appSettings = appSettings;
 		vm.sortBy = 'date';
+		var eventId = event.id;
 
 		vm.events = [];
 		vm.currentEvent = {};
 		vm.master = {};
 
 		function init() {
+			// if (simpleStorage.get('token') === undefined) {
+			// 	$('.show-event').addClass('hide');
+			// } else {
+			// 	console.log('logged in');
+			// }
 			timelineFactory.getEvents()
 			.then(function(result) {
 				vm.events = result.data.events;

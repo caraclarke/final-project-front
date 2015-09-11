@@ -17,11 +17,11 @@
       };
 
       userAPI.update = function(user) {
-        return $http.patch('http://localhost:3000/users/' + userId, user);
+        return $http.patch('http://localhost:3000/users/' + userId, user, {headers: { Authorization: 'Token token=' + simpleStorage.get('token')}});
       };
 
       userAPI.delete = function(user) {
-        return $http.delete('http://localhost:3000/users/' + userId);
+        return $http.delete('http://localhost:3000/users/' + userId, {headers: { Authorization: 'Token token=' + simpleStorage.get('token')}});
       };
       return userAPI;
     }; // end userFactory

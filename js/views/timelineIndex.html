@@ -3,19 +3,18 @@
 <section id="cd-timeline" class="cd-container">
 
 	<!-- begin event block -->
-	<div class="cd-timeline-block" ng-repeat="e in tIndexCtrl.events">
-		<!-- <h2>{{e}}</h2> -->
+	<div class="cd-timeline-block" ng-repeat="event in tIndexCtrl.events">
 		<div class="cd-timeline-img cd-picture">
 			<img src="img/internet-icon.png" alt="Icon">
-		</div> <!-- cd-timeline-img -->
+		</div> <!-- timeline icon -->
 
 		<div class="cd-timeline-content">
-			<h2>{{e.title}}</h2>
-			<p>{{e.caption}}</p>
-			<!-- <a class="cd-read-more" href="#/events/{{event.id}}">Read more</a> -->
-			<span class="cd-date">{{e.date}}</span>
-		</div> <!-- cd-timeline-content -->
-	</div> <!-- cd-timeline-block -->
+			<h2>{{event.title}}</h2>
+			<p>{{event.caption}}</p>
+			<a href="#/events/{{event.id}}" class='show-event'>Show Event</a> <!-- {{event.id}} -->
+			<span class="cd-date">{{event.date}}</span>
+		</div> <!-- end content block -->
+	</div>
 	<!-- end event block -->
 
 </section> <!-- cd-timeline -->
