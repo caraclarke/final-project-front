@@ -2,7 +2,7 @@
 
 <img src="img/project4-front.png" alt="project 4 display">
 
-In my project I used HTML/CSS and AngularJS on the front end.
+In my project I used HTML/CSS and AngularJS on the front end with Ruby on Rails  and PostgreSQL on my back end.
 
 When approaching this project I wanted a chance to practice AngularJS further and knew it would be a good language for the way I wanted to display my data. I started by writing out user stories and drawing wireframes to decide what information I wanted to get and how I wanted to display it. From there I was able to confirm that the languages I was using were a good choice for my website.
 After planning what information I wanted to display I built out my wireframes and started installing the basic files I would need for Angular. Another reason I wanted to use Angular was I like how it keeps concerns separated.
