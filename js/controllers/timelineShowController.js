@@ -20,10 +20,9 @@
 		} // end init
 
 		vm.update = function(title, caption, year) { // title, caption, year
+
 			timelineFactory.update(vm.master.id, title, caption, year)
 			.then(function(result) {
-				vm.master = result.events;
-				vm.events.push(vm.master);
 				window.location.href = ('#/');
 			}, function(data, status, headers, config) {
 				console.error(data, status);

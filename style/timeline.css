@@ -278,7 +278,7 @@ h1, h2 {
     font-size: 12px;
   }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 @media only screen and (min-width: 1170px) {
