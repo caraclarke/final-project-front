@@ -23,6 +23,7 @@ a {
   color: #34495e;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
+  font-size: 12px;
 }
 
 img {
@@ -57,6 +58,10 @@ h1, h2 {
 .navbar-brand {
   color: #34495e;
   font-size: 17px;
+}
+
+.marketing {
+  font-size: 12px;
 }
 
 /* timeline styling */
