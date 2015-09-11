@@ -1,5 +1,4 @@
 $(function() {
-  'use strict';
 	var timelineBlocks = $('.cd-timeline-block'), offset = 0.8;
 	hideBlocks(timelineBlocks, offset); // hide blocks that are not onscreen
 
