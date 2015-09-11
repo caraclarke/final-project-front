@@ -2,23 +2,12 @@
 	<div class="col-md-12 center">
 		<h3>{{userCtrl.user.firstName}} {{userCtrl.user.lastName}}'s Information</h3>
 
-		<table>
-			<tr>
-				<th>Email</th>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Admin</th>
-				<th>&nbsp;</th>
-			</tr>
-			<tr>
-				<td>{{ userCtrl.user.email }}</td>
-				<td>{{ userCtrl.user.firstName }}</td>
-				<td>{{ userCtrl.user.lastName }}</td>
-				<td>{{ userCtrl.user.admin }}</td><br><br>
-			</tr>
-		</table><br><br>
-		<td><a href="{{user.id}}">Update Account</a></td>
-		<td><a href="{{user.id}}">Delete Account</a></td>
-		<br><br>
+		<p>Email: {{ userCtrl.user.email }}</p>
+		<p>First Name: {{ userCtrl.user.firstName }}</p>
+		<p>Last Name: {{ userCtrl.user.lastName }}</p>
+		<p>&nbsp;</p>
+		<br>
+		<p><a href="{{user.id}}">Update Account</a></p>
+		<p><a href="{{user.id}}">Delete Account</a></p>
 	</div>
 </div>

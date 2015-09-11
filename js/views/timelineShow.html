@@ -1,38 +1,39 @@
-<h1>{{appSettings.title}}</h1>
-<!-- title, content, image, date  -->
-<section id="cd-timeline" class="cd-container">
+<div class="container marketing">
+	<div class="col-md-12 center">
+		<h1>{{appSettings.title}}</h1>
+		<!-- title, content, image, date  -->
+		<section id="cd-timeline" class="cd-container">
 
-	<!-- begin event block -->
-	<div class="cd-timeline-block">
-		<div class="cd-timeline-img cd-picture">
-			<img src="img/internet-icon.png" alt="Icon">
-		</div> <!-- timeline icon -->
+			<!-- begin event block -->
+			<div class="cd-timeline-block">
+				<div class="cd-timeline-img cd-picture">
+					<img src="img/internet-icon.png" alt="Icon">
+				</div> <!-- timeline icon -->
 
-		<div class="cd-timeline-content">
-			<h2>{{tShowCtrl.master.title}}</h2>
-			<p>{{tShowCtrl.master.caption}}</p>
-			<button type="button" id="update-event">Update Event</button>
-	    <button type="button" ng-click="tShowCtrl.delete(tShowCtrl.master.id)" href="#">Delete Event</button>
-			<span class="cd-date">{{tShowCtrl.master.date}}</span>
-		</div> <!-- end content block -->
+				<div class="cd-timeline-content">
+					<h2>{{tShowCtrl.master.title}}</h2>
+					<p>{{tShowCtrl.master.caption}}</p>
+					<button type="button" id="update-event">Update Event</button>
+			    <button type="button" ng-click="tShowCtrl.delete(tShowCtrl.master.id)" href="#">Delete Event</button>
+					<span class="cd-date">{{tShowCtrl.master.date}}</span>
+				</div> <!-- end content block -->
+			</div>
+			<!-- end event block -->
+		</section> <!-- cd-timeline  ng-click="tShowCtrl.update(tShowCtrl.master.id)" -->
+
+		<form name="updateEventForm" class="css-form hide">
+		  <fieldset>
+		    <legend>Update Event</legend>
+		    <input type="text" ng-model="tShowCtrl.master.title" name="title" value="Title" size="100">
+		    <br>
+		    <input type="text" ng-model="tShowCtrl.master.caption" name="caption" value="Caption" size="100">
+		    <br>
+		    <input type="text" ng-model="tShowCtrl.master.date" name="date" value="date" size="100">
+		    <br>
+		  </fieldset>
+		  <br>
+		  <button ng-click="tShowCtrl.update(tShowCtrl.master.title, tShowCtrl.master.caption, tShowCtrl.master.date)">Update Event</button>
+			<!-- tShowCtrl.master.title, tShowCtrl.master.caption, tShowCtrl.master.date, tShowCtrl.master.id -->
+		</form>
 	</div>
-	<!-- end event block -->
-</section> <!-- cd-timeline  ng-click="tShowCtrl.update(tShowCtrl.master.id)" -->
-
-<form name="updateEventForm" class="css-form hide">
-  <fieldset>
-    <legend>Update Event</legend>
-    <input type="text" ng-model="tShowCtrl.master.title" name="title" value="Title">
-    </div>
-    <br>
-    <input type="text" ng-model="tShowCtrl.master.caption" name="caption" value="Caption">
-    </div>
-    <br>
-    <input type="text" ng-model="tShowCtrl.master.date" name="date" value="date">
-    </div>
-    <br>
-  </fieldset>
-  <br>
-  <button ng-click="tShowCtrl.update(tShowCtrl.master.title, tShowCtrl.master.caption, tShowCtrl.master.date)">Update Event</button>
-	<!-- tShowCtrl.master.title, tShowCtrl.master.caption, tShowCtrl.master.date, tShowCtrl.master.id -->
-</form>
+</div>
