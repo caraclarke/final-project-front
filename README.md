@@ -1,5 +1,3 @@
-# final-project
-
 # final-project-front
 
 <img src="img/project4-front.png" alt="project 4 display">
