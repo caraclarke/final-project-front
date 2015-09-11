@@ -1,0 +1,30 @@
+body {
+	min-height: 2000px;
+	margin-top: 80px;
+	font-size: 100%;
+	font-family: "Droid Serif", serif;
+	color: #34495e;
+	background-color: #f0f3f4;
+}
+
+a {
+	color: #34495e;
+	text-decoration: none;
+	font-family: "Open Sans", sans-serif;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1, h2 {
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
+}
+
+.marketing table{
+	font-size: 15px;
+	text-align: center;
+	content: center;
+	margin: 0 auto;
+}

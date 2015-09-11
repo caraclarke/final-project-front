@@ -1,21 +1,24 @@
-<h3>{{userCtrl.user.firstName}} {{userCtrl.user.lastName}}'s Information</h3>
+<div class="container marketing">
+	<div class="col-md-12 center">
+		<h3>{{userCtrl.user.firstName}} {{userCtrl.user.lastName}}'s Information</h3>
 
-<table>
-  <tr>
-    <th>Email</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Admin</th>
-    <th>&nbsp;</th>
-  </tr>
-  <tr>
-    <td>{{ userCtrl.user.email }}</td>
-    <td>{{ userCtrl.user.firstName }}</td>
-    <td>{{ userCtrl.user.lastName }}</td>
-    <td>{{ userCtrl.user.admin }}</td>
-    <td><a href="{{user.id}}">Update Account</a></td>
-    <td><a href="{{user.id}}">Delete Account</a></td>
-  </tr>
-</table>
-<br><br>
-<footer>Version: {{ appSettings.version }}</footer>
+		<table>
+			<tr>
+				<th>Email</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Admin</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr>
+				<td>{{ userCtrl.user.email }}</td>
+				<td>{{ userCtrl.user.firstName }}</td>
+				<td>{{ userCtrl.user.lastName }}</td>
+				<td>{{ userCtrl.user.admin }}</td><br><br>
+			</tr>
+		</table><br><br>
+		<td><a href="{{user.id}}">Update Account</a></td>
+		<td><a href="{{user.id}}">Delete Account</a></td>
+		<br><br>
+	</div>
+</div>
