@@ -1,0 +1,13 @@
+As a visitor I want to,
+	see the timeline of internet history events so I can learn more.
+	see a specific event so I can get more details and see pictures.
+
+As a user (admin) I want to,
+	see the timeline of internet history events so I can check for errors.
+	see a specific event so I can get more details and see pictures, and check for errors.
+	log in so I can see my profile information.
+				so I can edit my profile information.
+				so I can delete my profile.
+				so I can edit events.
+				so I can delete events.
+				so I can add new events.
