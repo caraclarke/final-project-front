@@ -4,6 +4,7 @@
 		var vm = this;
 		vm.appSettings = appSettings;
 		vm.sortBy = 'date';
+		vm.reverse = false;
 		var eventId = event.id;
 
 		vm.events = [];
@@ -24,6 +25,12 @@
 				console.log('error getting events from db');
 			});
 		} // end init
+
+
+		vm.doSort = function(propName) {
+			vm.sortBy = propName;
+			vm.reverse = !vm.reverse;
+		};
 
 		init();
 	}; // end timelineController
