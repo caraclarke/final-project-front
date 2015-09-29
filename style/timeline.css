@@ -35,6 +35,10 @@ h1, h2 {
   font-weight: bold;
 }
 
+input {
+  margin: 15px;
+}
+
 /* Repeating sections */
 .cd-container {
   width: 90%;
