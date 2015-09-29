@@ -11,7 +11,7 @@
     };
 
     eventAPI.show = function(eventId) {
-      return $http.get( sa + '/events/' + eventId, {headers: { Authorization: 'Token token=' + simpleStorage.get('token')}});
+      return $http.get( sa + '/events/' + eventId);
     };
 
 		eventAPI.create = function(event) {
