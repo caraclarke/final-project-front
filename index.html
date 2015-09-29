@@ -30,6 +30,7 @@
 					<li class="active"><a href="#/">Home</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
+					<li class="nav">Search: <input type="text" ng-model="timelineIndexFilter.caption"></li>
 					<li class="dropdown">
 						<a href="#/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 						<span class="glyphicon glyphicon-user"></span></a>
@@ -52,10 +53,10 @@
 	<!-- Bootstrap -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<!-- bower angular -->
-	<script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="lib/angular.js"></script>
+  <script src="lib/angular-route.js"></script>
 	<!-- simpleStorage -->
-	<script src="bower_components/simpleStorage/simpleStorage.js"></script>
+	<script src="lib/simpleStorage.js"></script>
 	<!-- Timeline jQuery -->
 	<script src="js/timeline.js"></script>
 	<!-- js -->
