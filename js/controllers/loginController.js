@@ -12,9 +12,9 @@
 				simpleStorage.set('token', result.data.token);
 				simpleStorage.set('userId', result.data.userId);
 				window.location.href = '#/userShow';
-				// $('#login-button').addClass('hide');
-				// $('#logout-button').removeClass('hide');
-				// $('#user-profile').removeClass('hide');
+				$('#login-button').addClass('hide');
+				$('#logout-button').removeClass('hide');
+				$('#profile-button').removeClass('hide');
 			}, function(data, status, headers, config) {
 				console.error(status);
 			});

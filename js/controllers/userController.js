@@ -16,6 +16,14 @@
         }); // end .then
     } // end init
 
+    vm.logOut = function() {
+      simpleStorage.flush();
+      window.location.href = '#/timelineIndex';
+      $('#login-button').removeClass('hide');
+      $('#logout-button').addClass('hide');
+      $('#profile-button').addClass('hide');
+    }
+
     vm.delete = function() {
       userFactory.delete(vm.currentUser)
         .then(function(result) {

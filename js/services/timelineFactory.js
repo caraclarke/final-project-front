@@ -3,6 +3,7 @@
 	var TimelineFactory = function($http) {
 		var eventAPI = {};
 		var sa = 'https://still-dawn-2794.herokuapp.com';
+    var test = 'http://localhost:3000';
 
 		eventAPI.getEvents = function() {
       // allow access to index
