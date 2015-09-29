@@ -17,6 +17,7 @@ body {
   font-family: "Droid Serif", serif;
   color: #34495e;
   background-color: #f0f3f4;
+  overflow-x: hidden;
 }
 
 a {
@@ -232,6 +233,7 @@ input {
   border-radius: 0.25em;
   padding: 1em;
   box-shadow: 0 3px 0 #2874a6;
+  display: block;
 }
 .cd-timeline-content:after {
   content: "";

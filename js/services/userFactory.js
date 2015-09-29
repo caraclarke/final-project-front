@@ -4,6 +4,7 @@
     var UserFactory = function($http) {
       var userAPI = {};
 			var sa = 'https://still-dawn-2794.herokuapp.com';
+      var test = 'http://localhost:3000';
 
 			userAPI.login = function(email, password) {
 				return $http.post(sa + '/login/', { 'credentials': { email: email, password: password }});

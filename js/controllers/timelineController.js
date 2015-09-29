@@ -12,20 +12,22 @@
 		vm.master = {};
 
 		function init() {
-			// if (simpleStorage.get('token') === undefined) {
-			// 	$('.show-event').addClass('hide');
-			// } else {
-			// 	console.log('logged in');
-			// }
 			timelineFactory.getEvents()
 			.then(function(result) {
 				vm.events = result.data.events;
+				if (simpleStorage.get('token')) {
+	        $('#login-button').addClass('hide');
+					$('#logout-button').removeClass('hide');
+					$('#profile-button').removeClass('hide');
+	      } else {
+	        $('#login-button').removeClass('hide');
+					$('#logout-button').addClass('hide');
+					$('#profile-button').addClass('hide');
+	      }
 			}, function(data, status, headers, config) {
-				console.error(error);
-				console.log('error getting events from db');
+				console.error(status);
 			});
 		} // end init
-
 
 		vm.doSort = function(propName) {
 			vm.sortBy = propName;
