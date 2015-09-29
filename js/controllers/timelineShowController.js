@@ -14,6 +14,10 @@
 			timelineFactory.show(eventId)
 			.then(function(result) {
 				vm.master = result.data;
+				if (simpleStorage.get('token')) {
+					$('#update-event').removeClass('hide');
+					$('#delete-event').removeClass('hide');
+				}
 			}, function(data, status, headers, config) {
 				console.error(data, status);
 			});
