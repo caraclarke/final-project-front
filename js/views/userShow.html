@@ -7,8 +7,22 @@
 		<p>Last Name: {{ userCtrl.user.lastName }}</p>
 		<p>&nbsp;</p>
 		<br>
-		<p><a href="{{user.id}}">Update Account</a></p>
+		<p><a id="update-user">Update Account</a></p>
 		<p><a href="{{user.id}}">Delete Account</a></p>
 		<p><a href="#/timelineIndex" id="logout-button" ng-click="userCtrl.logOut()">Logout</a></p>
+
+		<form name="updateUserForm" class="css-form hide">
+		  <fieldset>
+		    <legend>Update User</legend>
+		    <input type="text" ng-model="userCtrl.user.email" name="email" value="Email" size="100">
+		    <br>
+		    <input type="text" ng-model="userCtrl.user.firstName" name="firstName" value="First Name" size="100">
+		    <br>
+		    <input type="text" ng-model="userCtrl.user.lastName" name="lastName" value="Last Name" size="100">
+		    <br>
+		  </fieldset>
+		  <br>
+		  <button ng-click="userCtrl.update(userCtrl.user.email, userCtrl.user.firstName, userCtrl.user.lastName)">Update User</button>
+		</form>
 	</div>
 </div>

@@ -30,19 +30,26 @@
           console.log('destroyed');
         }, function(data, status, headers, config) {
           console.log('error DELETING a USER');
+          console.error(data, status);
         });
     }; // end delete
 
-    vm.update = function() {
-      userFactory.update(vm.currentUser)
+    vm.update = function(email, firstName, lastName) {
+      userFactory.update(vm.user.id, email, firstName, lastName)
         .then(function(result) {
+          window.location.href = ('#/userShow');
           vm.user = result.data;
           vm.users.push(vm.user);
           vm.currentUser = {};
         }, function(data, status, headers, config) {
           console.log('error UPDATING a USER');
+          console.error(data, status);
         });
-    }; //TODO put in right format
+    };
+
+    $('#update-user').on('click', function() {
+      $('.css-form').removeClass('hide');
+    });
 
     init();
   }; // end UserController
