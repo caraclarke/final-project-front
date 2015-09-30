@@ -18,11 +18,11 @@
         return $http.post(sa + '/users/', { user: user });
       };
 
-      userAPI.update = function(user) {
-        return $http.patch(sa + '/users/' + userId, user, {headers: { Authorization: 'Token token=' + simpleStorage.get('token')}});
+      userAPI.update = function(userId, email, firstName, lastName) {
+        return $http.put(sa + '/users/' + userId, {credentials: {email: email, firstName: firstName, lastName: lastName}}, {headers: { Authorization: 'Token token=' + simpleStorage.get('token')}});
       };
 
-      userAPI.delete = function(user) {
+      userAPI.delete = function(userId) {
         return $http.delete(sa + '/users/' + userId, {headers: { Authorization: 'Token token=' + simpleStorage.get('token')}});
       };
       return userAPI;
