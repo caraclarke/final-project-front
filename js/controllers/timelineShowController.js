@@ -23,11 +23,10 @@
 			});
 		} // end init
 
-		vm.update = function(title, caption, year) { // title, caption, year
-
+		vm.update = function(title, caption, year) {
 			timelineFactory.update(vm.master.id, title, caption, year)
 			.then(function(result) {
-				window.location.href = ('#/');
+				window.location.href = ('#/timelineIndex');
 			}, function(data, status, headers, config) {
 				console.error(data, status);
 			});
