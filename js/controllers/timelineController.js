@@ -24,6 +24,7 @@
 					$('#logout-button').addClass('hide');
 					$('#profile-button').addClass('hide');
 	      }
+	      $('#my-popover').popover()
 			}, function(data, status, headers, config) {
 				console.error(status);
 			});
