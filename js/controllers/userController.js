@@ -24,16 +24,6 @@
       $('#profile-button').addClass('hide');
     }
 
-    vm.delete = function() {
-      userFactory.delete(vm.currentUser)
-        .then(function(result) {
-          console.log('destroyed');
-        }, function(data, status, headers, config) {
-          console.log('error DELETING a USER');
-          console.error(data, status);
-        });
-    }; // end delete
-
     vm.update = function(email, firstName, lastName) {
       userFactory.update(vm.user.id, email, firstName, lastName)
         .then(function(result) {
@@ -50,6 +40,16 @@
     $('#update-user').on('click', function() {
       $('.css-form').removeClass('hide');
     });
+
+    vm.delete = function() {
+      userFactory.delete(userId)
+        .then(function(result) {
+          console.log('destroyed');
+        }, function(data, status, headers, config) {
+          console.log('error DELETING a USER');
+          console.error(data, status);
+        });
+    }; // end delete
 
     init();
   }; // end UserController

@@ -39,8 +39,7 @@
 		vm.delete = function(eventId) {
 			timelineFactory.delete(eventId)
 			.then(function(result) {
-				console.log('destroyed');
-				//window.location.href = '#/';
+				window.location.href = ('#/timelineIndex');
 			}, function(data, status, headers, config) {
 				console.error(data, status);
 			});
